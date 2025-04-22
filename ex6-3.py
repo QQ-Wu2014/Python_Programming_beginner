@@ -1,4 +1,4 @@
-day = input("Input days in week [1~7]")
+day = int(input("please num 1-7"))
 match day:
   case 1:
     print("Monday")
