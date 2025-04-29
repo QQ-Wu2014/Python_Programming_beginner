@@ -1,0 +1,19 @@
+def convert_year(year, to_roc=True):
+    
+    if to_roc:
+        return year - 1911
+    else:
+        return year + 1911
+
+
+direction = input("請選擇轉換方向 (1: 西元 -> 民國, 2: 民國 -> 西元): ")
+
+
+if direction == '1':
+    western_year = int(input("請輸入西元年份: "))
+    print(f"西元 {western_year} 年轉換為民國是 {convert_year(western_year)} 年")
+elif direction == '2':
+    roc_year = int(input("請輸入民國年份: "))
+    print(f"民國 {roc_year} 年轉換為西元是 {convert_year(roc_year, to_roc=False)} 年")
+else:
+    print("選擇無效，請選擇 1 或 2。")
